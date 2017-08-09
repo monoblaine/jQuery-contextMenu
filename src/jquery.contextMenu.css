@@ -15,7 +15,7 @@
 .context-menu-list {
     margin:0; 
     padding:0;
-    
+    z-index:50;
     min-width: 120px;
     max-width: 250px;
     display: inline-block;
@@ -36,7 +36,7 @@
 }
 
 .context-menu-item {
-    padding: 2px 2px 2px 24px;
+    padding: 10px;
     background-color: #EEE;
     position: relative;
     -webkit-user-select: none;
@@ -79,7 +79,7 @@
     position: absolute;
     top: 0;
     right: 3px;
-    z-index: 1;
+    z-index: 50;
 }
 
 /* icons
@@ -131,6 +131,7 @@
     /* re-positioned by js */
     right: -5px;
     top: 5px;
+	z-index:50;
 }
 
 .context-menu-item.hover > .context-menu-list {

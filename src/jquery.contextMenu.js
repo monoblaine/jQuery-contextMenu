@@ -191,7 +191,7 @@ var // currently active contextMenu trigger
             $tt = $t;
 
         while (true) {
-            zin = Math.max(zin, parseInt($tt.css('z-index'), 10) || 0);
+            zin = Math.max(zin, parseInt($tt.css('z-index'), 10) || 1000);
             $tt = $tt.parent();
             if (!$tt || !$tt.length || "html body".indexOf($tt.prop('nodeName').toLowerCase()) > -1 ) {
                 break;
@@ -1181,7 +1181,7 @@ var // currently active contextMenu trigger
         layer: function(opt, zIndex) {
             // add transparent layer for click area
             // filter and background for Internet Explorer, Issue #23
-            var $layer = opt.$layer = $('<div id="context-menu-layer" style="position:fixed; z-index:' + zIndex + '; top:0; left:0; opacity: 0; filter: alpha(opacity=0); background-color: #000;"></div>')
+            var $layer = opt.$layer = $('<div id="context-menu-layer" style="position:fixed; z-index:' + 1000 + '; top:0; left:0; opacity: 0; filter: alpha(opacity=0); background-color: #000;"></div>')
                 .css({height: $win.height(), width: $win.width(), display: 'block'})
                 .data('contextMenuRoot', opt)
                 .insertBefore(this)
