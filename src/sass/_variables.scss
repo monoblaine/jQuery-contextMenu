@@ -17,8 +17,8 @@ $context-menu-border-color: #bebebe !default;
 $context-menu-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) !default;
 
 // Item Sizing
-$context-menu-padding-vertical: .2em !default;
-$context-menu-padding-horizontal: 2em !default;
+$context-menu-padding-vertical: 10px !default;
+$context-menu-padding-horizontal: 10px !default;
 // Item Default
 $context-menu-item-padding: $context-menu-padding-vertical $context-menu-padding-horizontal !default;
 $context-menu-text-color: #2F2F2F !default;

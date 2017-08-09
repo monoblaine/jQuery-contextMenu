@@ -255,7 +255,7 @@
                 $tt = $t;
 
             while (true) {
-                zin = Math.max(zin, parseInt($tt.css('z-index'), 10) || 0);
+                zin = Math.max(zin, parseInt($tt.css('z-index'), 10) || 1000);
                 $tt = $tt.parent();
                 if (!$tt || !$tt.length || 'html body'.indexOf($tt.prop('nodeName').toLowerCase()) > -1) {
                     break;
@@ -1459,7 +1459,7 @@
                         width: $win.width(),
                         display: 'block',
                         position: 'fixed',
-                        'z-index': zIndex,
+                        'z-index': 1000,
                         top: 0,
                         left: 0,
                         opacity: 0,

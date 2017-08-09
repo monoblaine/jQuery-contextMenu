@@ -60,6 +60,7 @@
   min-width: $context-menu-min-width;
   padding: $context-menu-container-padding;
   position: absolute;
+  z-index: 50;
 }
 
 .context-menu-item {
@@ -109,7 +110,7 @@
   top: 50%;
   transform: translateY(-50%);
   width: 0;
-  z-index: 1;
+  z-index: 50;
 }
 
 /**
@@ -154,6 +155,7 @@
   /* re-positioned by js */
   right: -.3em;
   top: .3em;
+  z-index: 50;
 }
 
 .context-menu-item.context-menu-visible > .context-menu-list {
