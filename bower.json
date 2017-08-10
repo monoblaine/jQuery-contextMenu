@@ -10,7 +10,14 @@
     "Rodney Rehm <rodney.rehm@medialize.de> (http://rodneyrehm.de/en)"
   ],
   "description": "Full featured context menu handler capable of handling thousands of elements",
-  "keywords": ["contextmenu", "context-menu", "right-click-menu", "right-click", "navigation", "menu"],
+  "keywords": [
+    "contextmenu",
+    "context-menu",
+    "right-click-menu",
+    "right-click",
+    "navigation",
+    "menu"
+  ],
   "license": "MIT",
   "dependencies": {
     "jquery": ">=1.8.2"
@@ -24,5 +31,6 @@
     "*.html",
     "/*.css",
     "/*.js"
-  ]
+  ],
+  "version": "2.5.0-mutant"
 }
