@@ -1,7 +1,7 @@
 /**
- * jQuery contextMenu v2.5.0 - Plugin for simple contextMenu handling
+ * jQuery contextMenu v2.5.0-mutant - Plugin for simple contextMenu handling
  *
- * Version: v2.5.0
+ * Version: v2.5.0-mutant
  *
  * Authors: Björn Brala (SWIS.nl), Rodney Rehm, Addy Osmani (patches for FF)
  * Web: http://swisnl.github.io/jQuery-contextMenu/
@@ -11,7 +11,7 @@
  * Licensed under
  *   MIT License http://www.opensource.org/licenses/mit-license
  *
- * Date: 2017-05-25T11:30:28.900Z
+ * Date: 2017-08-10T09:07:32.015Z
  */
 
 // jscs:disable
@@ -255,7 +255,7 @@
                 $tt = $t;
 
             while (true) {
-                zin = Math.max(zin, parseInt($tt.css('z-index'), 10) || 0);
+                zin = Math.max(zin, parseInt($tt.css('z-index'), 10) || 1000);
                 $tt = $tt.parent();
                 if (!$tt || !$tt.length || 'html body'.indexOf($tt.prop('nodeName').toLowerCase()) > -1) {
                     break;
@@ -1459,7 +1459,7 @@
                         width: $win.width(),
                         display: 'block',
                         position: 'fixed',
-                        'z-index': zIndex,
+                        'z-index': 1000,
                         top: 0,
                         left: 0,
                         opacity: 0,

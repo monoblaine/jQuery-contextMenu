@@ -2,7 +2,7 @@
 /*!
  * jQuery contextMenu - Plugin for simple contextMenu handling
  *
- * Version: v2.5.0
+ * Version: v2.5.0-mutant
  *
  * Authors: Björn Brala (SWIS.nl), Rodney Rehm, Addy Osmani (patches for FF)
  * Web: http://swisnl.github.io/jQuery-contextMenu/
@@ -12,7 +12,7 @@
  * Licensed under
  *   MIT License http://www.opensource.org/licenses/mit-license
  *
- * Date: 2017-05-25T11:30:28.663Z
+ * Date: 2017-08-10T09:07:31.778Z
  */
 @-webkit-keyframes cm-spin {
   0% {
@@ -54,8 +54,8 @@
   font-style: normal; 
   font-weight: normal;
 
-  src: url("font/context-menu-icons.eot?4yg1f");
-  src: url("font/context-menu-icons.eot?4yg1f#iefix") format("embedded-opentype"), url("font/context-menu-icons.woff2?4yg1f") format("woff2"), url("font/context-menu-icons.woff?4yg1f") format("woff"), url("font/context-menu-icons.ttf?4yg1f") format("truetype");
+  src: url("font/context-menu-icons.eot?1915n");
+  src: url("font/context-menu-icons.eot?1915n#iefix") format("embedded-opentype"), url("font/context-menu-icons.woff2?1915n") format("woff2"), url("font/context-menu-icons.woff?1915n") format("woff"), url("font/context-menu-icons.ttf?1915n") format("truetype");
 }
 
 .context-menu-icon-add:before {
@@ -157,7 +157,8 @@
 }
 
 .context-menu-list {
-  position: absolute; 
+  position: absolute;
+  z-index: 50; 
   display: inline-block;
   min-width: 13em;
   max-width: 26em;
@@ -175,7 +176,7 @@
 
 .context-menu-item {
   position: relative;
-  padding: .2em 2em;
+  padding: 10px 10px;
   color: #2f2f2f;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -219,7 +220,7 @@
   position: absolute;
   top: 50%;
   right: .5em;
-  z-index: 1; 
+  z-index: 50; 
   width: 0;
   height: 0;
   content: '';
@@ -272,9 +273,10 @@
 }
 
 .context-menu-item > .context-menu-list {
-  top: .3em; 
+  top: .3em;
   /* re-positioned by js */
   right: -.3em;
+  z-index: 50; 
   display: none;
 }
 
